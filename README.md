@@ -55,7 +55,7 @@ This package sits on top of Laravel 4's Pagination, so use it the same way. [Lar
  * `always_show`: Set to `true` to always show the paginator, even if there are no pages. Default: `false`.
  * `show_first_last`: Set to `true` to show First/Last page links. Default: `false`.
  * `align_simple`: Set to `true` to align the simple paginator links to the sides. Default: `false`.
- * `classes`: Set the sliding paginator's classes. For example, to center the paginator: `pagination pagination-centered`. See: [http://twitter.github.io/bootstrap/components.html#pagination]. Default: `pagination`.
+ * `classes`: Set the sliding paginator's classes. For example, to center the paginator: `pagination pagination-centered`. See: [Twitter Bootstrap Pagination Docs](http://twitter.github.io/bootstrap/components.html#pagination). Default: `pagination`.
 
 ###Language
 
