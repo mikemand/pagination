@@ -1,0 +1,30 @@
+{
+    "name": "kmd/pagination",
+    "description": "Extend Laravel 4 basic Bootstrap Pagination",
+    "keywords": [
+        "laravel",
+        "pagination"
+    ],
+    "authors": [
+        {
+            "name": "Micheal Mand - KMDWebDesigns",
+            "email": "micheal@kmdwebdesigns.com"
+        }
+    ],
+    "license": [
+        "MIT"
+    ],
+    "require": {
+        "php": ">=5.3.7",
+        "illuminate/support": "4.0.x"
+    },
+    "autoload": {
+        "classmap": [
+            
+        ],
+        "psr-0": {
+            "Kmd\\Pagination": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
