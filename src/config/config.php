@@ -8,7 +8,7 @@ return array(
     'show_first_last' => false,
     // Align simple paginator to the sides?
     'align_simple' => false,
-    // Paginator's Bootstrap classes. See: http://twitter.github.io/bootstrap/components.html#pagination
+    // Paginator's Bootstrap classes. See: http://getbootstrap.com/2.3.2/components.html#pagination
     'classes' => 'pagination',
     
 );
