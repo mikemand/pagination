@@ -21,7 +21,7 @@ class BootstrapPresenter extends \Illuminate\Pagination\BootstrapPresenter {
 			$content = $this->getPageSlider();
 		}
 
-		if (\Config::get('pagination::show_first_last'))
+		if (\Config::get('pagination::show_first_last') === true)
 			return $this->getFirst().$this->getPrevious().$content.$this->getNext().$this->getLast();
 
 		return $this->getPrevious().$content.$this->getNext();
@@ -35,14 +35,14 @@ class BootstrapPresenter extends \Illuminate\Pagination\BootstrapPresenter {
 	 */
 	public function getPrevious($text = null)
 	{
-		($text = $text) or ($text = \Lang::get('pagination::pagination.slider.prev_link_text'));
+		$text = \Config::get('pagination::slider.prev_link_text', $text);
 		$class = \Config::get('pagination::align_simple') ? 'previous' : '';
 		// If the current page is less than or equal to one, it means we can't go any
 		// further back in the pages, so we will render a disabled previous button
 		// when that is the case. Otherwise, we will give it an active "status".
 		if ($this->currentPage <= 1)
 		{
-			$class .= ' disabled';
+			$class = ltrim($class . ' ') . 'disabled';
 			return '<li class="'.$class.'"><span>'.$text.'</span></li>';
 		}
 		else
@@ -61,14 +61,14 @@ class BootstrapPresenter extends \Illuminate\Pagination\BootstrapPresenter {
 	 */
 	public function getNext($text = null)
 	{
-		($text = $text) or ($text = \Lang::get('pagination::pagination.slider.next_link_text'));
+		$text = \Config::get('pagination::slider.next_link_text', $text);
 		$class = \Config::get('pagination::align_simple') ? 'previous' : '';
 		// If the current page is greater than or equal to the last page, it means we
 		// can't go any further into the pages, as we're already on this last page
 		// that is available, so we will make it the "next" link style disabled.
 		if ($this->currentPage >= $this->lastPage)
 		{
-			$class .= ' disabled';
+			$class = ltrim($class . ' ') . 'disabled';
 			return '<li class="'.$class.'"><span>'.$text.'</span></li>';
 		}
 		else
@@ -87,7 +87,7 @@ class BootstrapPresenter extends \Illuminate\Pagination\BootstrapPresenter {
 	 */
 	public function getFirst($text = null)
 	{
-		($text = $text) or ($text = \Lang::get('pagination::pagination.slider.first_link_text'));
+		$text = \Config::get('pagination::slider.first_link_text', $text);
 		// If the current page is less than or equal to one, it means we can't go any
 		// further back in the pages, so we will render a disabled previous button
 		// when that is the case. Otherwise, we will give it an active "status".
@@ -111,7 +111,7 @@ class BootstrapPresenter extends \Illuminate\Pagination\BootstrapPresenter {
 	 */
 	public function getLast($text = null)
 	{
-		($text = $text) or ($text = \Lang::get('pagination::pagination.slider.last_link_text'));
+		$text = \Config::get('pagination::slider.last_link_text', $text);
 		// If the current page is greater than or equal to the last page, it means we
 		// can't go any further into the pages, as we're already on this last page
 		// that is available, so we will make it the "next" link style disabled.
