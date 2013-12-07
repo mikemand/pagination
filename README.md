@@ -6,6 +6,8 @@ Mimics default Laravel 4 pagination out of the box. Change config or language op
 
 Created and maintained by Micheal Mand. Copyright &copy; 2013. Licensed under the [MIT license](LICENSE.md).
 
+[![Total Downloads](https://poser.pugx.org/kmd/pagination/downloads.png)](https://packagist.org/packages/kmd/pagination)
+
 ##Installation
 
 Add `kmd/pagination` as a requirement to `composer.json`:
