@@ -57,12 +57,12 @@ This package sits on top of Laravel 4's Pagination, so use it the same way. [Lar
  * `align_simple`: Set to `true` to align the simple paginator links to the sides. Default: `false`.
  * `classes`: Set the sliding paginator's classes. For example, to center the paginator: `pagination pagination-centered`. See: [Twitter Bootstrap Pagination Docs](http://twitter.github.io/bootstrap/components.html#pagination). Default: `pagination`.
  * `slider`:
-   * `prev_link_text`: Set the previous link text. Default: `&lsaquo;` (`&amp;lsaquo;`).
-   * `next_link_text`: Set the next link text. Default: `&rsaquo;` (`&amp;rsaquo;`).
-   * `first_link_text`: Set the first link text. Default: `&laquo; First` (`&amp;laquo; First`).
-   * `last_link_text`: Set the last link text. Default: `Last &raquo;` (`Last &amp;raquo;`).
+   * `prev_link_text`: Set the previous link text. Default: `&lsaquo;`.
+   * `next_link_text`: Set the next link text. Default: `&rsaquo;`.
+   * `first_link_text`: Set the first link text. Default: `&laquo; First`.
+   * `last_link_text`: Set the last link text. Default: `Last &raquo;`.
  * `simple`:
-   * `prev_link_text`: Set the previous link text. Default: `&larr; Previous` (`&amp;larr; Previous`).
-   * `next_link_text`: Set the next link text. Default: `Next &rarr;` (`Next &amp;rarr;`).
+   * `prev_link_text`: Set the previous link text. Default: `&larr; Previous`.
+   * `next_link_text`: Set the next link text. Default: `Next &rarr;`.
 
 To change the pagination view, edit `app/config/view.php` and change the `pagination` value. Want to create your own? Model it after [one of the views](src/views).
