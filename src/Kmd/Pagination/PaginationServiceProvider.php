@@ -1,4 +1,6 @@
-<?php namespace Kmd\Pagination;
+<?php
+
+namespace Kmd\Pagination;
 
 use Illuminate\Support\ServiceProvider;
 
