@@ -1,4 +1,6 @@
-<?php namespace Kmd\Pagination;
+<?php
+
+namespace Kmd\Pagination;
 
 class BootstrapPresenter extends \Illuminate\Pagination\BootstrapPresenter
 {
