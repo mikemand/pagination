@@ -58,7 +58,7 @@ class BootstrapPresenter extends \Illuminate\Pagination\BootstrapPresenter
     public function getNext($text = null)
     {
         $text = \Config::get('pagination::slider.next_link_text', $text);
-        $class = \Config::get('pagination::align_simple') ? 'previous' : '';
+        $class = \Config::get('pagination::align_simple') ? 'next' : '';
         // If the current page is greater than or equal to the last page, it means we
         // can't go any further into the pages, as we're already on this last page
         // that is available, so we will make it the "next" link style disabled.
